@@ -1,10 +1,22 @@
 {
   "isDev": true,
   "server": {
-    "port": 8888
+    "port": 8888,
+    "secure": true,
+    "sslgenerator": {
+      "country": "ES",
+      "state": "Santa Cruz de Tenerife",
+      "location": "La Laguna",
+      "organization": "InOpinia",
+      "department": "IT Department",
+      "website": "inopinia.com",
+      "emailAddress": "n.fernandez.conde@inopinia.com"
+    },
+    "key": "./config/sslcerts/key.pem",
+    "cert": "./config/sslcerts/cert.pem",
+    "password": "$SSL_PASSWORD"
   },
   "rooms": {
-    "/* maxClients */": "/* maximum number of clients per room. 0 = no limit */",
     "maxClients": 0
   },
   "stunservers": [

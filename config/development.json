@@ -2,8 +2,16 @@
   "isDev": true,
   "server": {
     "port": 8888,
-    "/* secure */": "/* whether this connects via https */",
     "secure": false,
+    "sslgenerator": {
+      "country": null,
+      "state": null,
+      "location": null,
+      "organization": null,
+      "department": null,
+      "website": null,
+      "emailAddress": null
+    },
     "key": null,
     "cert": null,
     "password": null
