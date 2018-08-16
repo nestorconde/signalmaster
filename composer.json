@@ -1,0 +1,22 @@
+{
+  "name":         "inopinia/signalmaster",
+  "description":  "Webrtc signaling server",
+  "keywords": [
+    "webrtc",
+    "inopinia"
+  ],
+  "license":      "MIT",
+  "type":         "library",
+  "authors": [
+    {
+      "name":     "InOpinia SL",
+      "email":    "j.dharandas.mendez@inopinia.com",
+      "homepage": "https://inopinia.com"
+    }
+  ],
+  "support": {
+    "issues":     "https://github.com/nestorconde/signalmaster/issues",
+    "email":      "n.fernandez.conde@inopinia.com",
+    "source":     "https://github.com/nestorconde/signalmaster"
+  }
+}
