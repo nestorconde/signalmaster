@@ -1,5 +1,5 @@
 {
-  "isDev": true,
+  "isDev": false,
   "server": {
     "port": 8888,
     "secure": true,
@@ -9,11 +9,11 @@
       "location": "La Laguna",
       "organization": "InOpinia",
       "department": "IT Department",
-      "website": "inopinia.com",
+      "website": "signalmaster.inopinia.com",
       "emailAddress": "n.fernandez.conde@inopinia.com"
     },
-    "key": "./config/key.pem",
-    "cert": "./config/cert.pem",
+    "key": "$DIR/key.pem",
+    "cert": "$DIR/cert.pem",
     "password": "$SSL_PASSWORD"
   },
   "rooms": {
