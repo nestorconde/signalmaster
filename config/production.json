@@ -12,8 +12,8 @@
       "website": "inopinia.com",
       "emailAddress": "n.fernandez.conde@inopinia.com"
     },
-    "key": "./config/sslcerts/key.pem",
-    "cert": "./config/sslcerts/cert.pem",
+    "key": "./config/key.pem",
+    "cert": "./config/cert.pem",
     "password": "$SSL_PASSWORD"
   },
   "rooms": {
