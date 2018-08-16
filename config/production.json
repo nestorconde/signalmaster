@@ -3,17 +3,8 @@
   "server": {
     "port": 8888,
     "secure": true,
-    "sslgenerator": {
-      "country": "ES",
-      "state": "Santa Cruz de Tenerife",
-      "location": "La Laguna",
-      "organization": "InOpinia",
-      "department": "IT Department",
-      "website": "signalmaster.inopinia.com",
-      "emailAddress": "n.fernandez.conde@inopinia.com"
-    },
-    "key": "$DIR/key.pem",
-    "cert": "$DIR/cert.pem",
+    "key": "$SSL_KEY",
+    "cert": "$SSL_CERT",
     "password": "$SSL_PASSWORD"
   },
   "rooms": {
