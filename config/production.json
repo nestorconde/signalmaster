@@ -4,8 +4,7 @@
     "port": 8888,
     "secure": true,
     "key": "$SSL_KEY",
-    "cert": "$SSL_CERT",
-    "password": "$SSL_PASSWORD"
+    "cert": "$SSL_CERT"
   },
   "rooms": {
     "maxClients": 0

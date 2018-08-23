@@ -4,8 +4,7 @@
     "port": 8888,
     "secure": false,
     "key": null,
-    "cert": null,
-    "password": null
+    "cert": null
   },
   "rooms": {
     "maxClients": 0
