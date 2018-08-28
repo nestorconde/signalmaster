@@ -11,7 +11,7 @@ server_handler.get('/health-check', function (req, res) {
     console.log(Date.now(), 'healthcheck');
     return res.sendStatus(200);
 });
-server_handler.use(express.static('static'));
+server_handler.use(express.static(__dirname + '/static'));
 server_handler.use(require('helmet')());
 
 // Create an http(s) server instance to that socket.io can listen to
