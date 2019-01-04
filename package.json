@@ -3,10 +3,13 @@
   "description": "Simple signaling server for SimpleWebRTC",
   "version": "1.0.1",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.3",
+    "forever": "^0.15.3",
     "getconfig": "^4.3.0",
     "helmet": "^3.13.0",
     "node-uuid": "1.2.0",
+    "nvm": "^0.0.4",
     "socket.io": "^1.7.4",
     "yetify": "0.0.1"
   },

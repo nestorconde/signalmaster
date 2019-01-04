@@ -1,24 +1,30 @@
+/*global console*/
 var yetify = require('yetify'),
     config = require('getconfig'),
     fs = require('fs'),
     sockets = require('./sockets'),
     port = parseInt(process.env.PORT || config.server.port, 10),
-    server = null,
-    express = require('express'),
-    server_handler = express()
-;
-server_handler.get('/health-check', function (req, res) {
-    console.log(Date.now(), 'healthcheck');
-    return res.sendStatus(200);
-});
-server_handler.use(express.static(__dirname + '/static'));
-server_handler.use(require('helmet')());
+    server_handler = function (req, res) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        if (req.url === '/healthcheck') {
+            console.log(Date.now(), 'healthcheck');
+            res.writeHead(200);
+            res.end();
+            return;
+        }
+        res.writeHead(404);
+        res.end();
+    },
+    server = null;
+
 
 // Create an http(s) server instance to that socket.io can listen to
 if (config.server.secure) {
     server = require('https').Server({
         key: fs.readFileSync(config.server.key),
-        cert: fs.readFileSync(config.server.cert)
+        cert: fs.readFileSync(config.server.cert),
+        passphrase: config.server.password
     }, server_handler);
 } else {
     server = require('http').Server(server_handler);
@@ -36,4 +42,3 @@ if (config.server.secure) {
     httpUrl = "http://localhost:" + port;
 }
 console.log(yetify.logo() + ' -- signal master is running at: ' + httpUrl);
-

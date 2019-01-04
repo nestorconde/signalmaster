@@ -82,6 +82,7 @@ module.exports = function (server, config) {
             }
             // check if exists
             var room = io.nsps['/'].adapter.rooms[name];
+
             if (room && room.length) {
                 safeCb(cb)('taken');
             } else {
@@ -126,13 +127,16 @@ module.exports = function (server, config) {
 
     function describeRoom(name) {
         var adapter = io.nsps['/'].adapter;
-        var clients = adapter.rooms[name] || {};
+        var room = adapter.rooms[name] || {};
         var result = {
             clients: {}
         };
-        Object.keys(clients).forEach(function (id) {
-            result.clients[id] = adapter.nsp.connected[id].resources;
-        });
+        if (room && room.sockets) {
+            var clients = Object.keys(room.sockets);
+            clients.forEach(function (id) {
+                result.clients[id] = adapter.nsp.connected[id].resources;
+            });
+        }
         return result;
     }
 
