@@ -1,7 +1,7 @@
 {
   "isDev": false,
   "server": {
-    "port": 8888,
+    "port": 8110,
     "secure": true,
     "key": "$SSL_KEY",
     "cert": "$SSL_CERT"
@@ -9,6 +9,6 @@
   "rooms": {
     "maxClients": 0
   },
-  "stunservers": [{"urls": "stun:stun.l.google.com:19302"}],
+  "stunservers": [{ "urls": "stun:stun.l.google.com:19302" }],
   "turnservers": []
 }
