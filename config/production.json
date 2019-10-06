@@ -1,7 +1,7 @@
 {
   "isDev": false,
   "server": {
-    "port": 8110,
+    "port": 8888,
     "secure": true,
     "key": "$SSL_KEY",
     "cert": "$SSL_CERT"
